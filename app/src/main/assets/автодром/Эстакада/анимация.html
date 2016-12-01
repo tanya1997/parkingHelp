@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--
+	NOTES:
+	1. All tokens are represented by '$' sign in the template.
+	2. You can write your code only wherever mentioned.
+	3. All occurrences of existing tokens will be replaced by their appropriate values.
+	4. Blank lines will be removed automatically.
+	5. Remove unnecessary comments before creating your template.
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<title>Эстакада</title>
+<!-- write your code here -->
+<script src="../../createjs-2015.11.26.min.js"></script>
+<script>
+(function (lib, img, cjs, ss) {
+var p; // shortcut to reference prototypes
+lib.webFontTxtInst = {}; 
+var loadedTypekitCount = 0;
+var loadedGoogleCount = 0;
+var gFontsUpdateCacheList = [];
+var tFontsUpdateCacheList = [];
+// library properties:
+lib.properties = {
+	width: 800,
+	height: 600,
+	fps: 24,
+	color: "#FFFFFF",
+	opacity: 1.00,
+	webfonts: {},
+	manifest: []
+};
+lib.ssMetadata = [];
+lib.updateListCache = function (cacheList) {		
+	for(var i = 0; i < cacheList.length; i++) {		
+		if(cacheList[i].cacheCanvas)		
+			cacheList[i].updateCache();		
+	}		
+};		
+lib.addElementsToCache = function (textInst, cacheList) {		
+	var cur = textInst;		
+	while(cur != exportRoot) {		
+		if(cacheList.indexOf(cur) != -1)		
+			break;		
+		cur = cur.parent;		
+	}		
+	if(cur != exportRoot) {	//we have found an element in the list		
+		var cur2 = textInst;		
+		var index = cacheList.indexOf(cur);		
+		while(cur2 != cur) { //insert all it's children just before it		
+			cacheList.splice(index, 0, cur2);		
+			cur2 = cur2.parent;		
+			index++;		
+		}		
+	}		
+	else {	//append element and it's parents in the array		
+		cur = textInst;		
+		while(cur != exportRoot) {		
+			cacheList.push(cur);		
+			cur = cur.parent;		
+		}		
+	}		
+};		
+lib.gfontAvailable = function(family, totalGoogleCount) {		
+	lib.properties.webfonts[family] = true;		
+	var txtInst = lib.webFontTxtInst && lib.webFontTxtInst[family] || [];		
+	for(var f = 0; f < txtInst.length; ++f)		
+		lib.addElementsToCache(txtInst[f], gFontsUpdateCacheList);		
+	loadedGoogleCount++;		
+	if(loadedGoogleCount == totalGoogleCount) {		
+		lib.updateListCache(gFontsUpdateCacheList);		
+	}		
+};		
+lib.tfontAvailable = function(family, totalTypekitCount) {		
+	lib.properties.webfonts[family] = true;		
+	var txtInst = lib.webFontTxtInst && lib.webFontTxtInst[family] || [];		
+	for(var f = 0; f < txtInst.length; ++f)		
+		lib.addElementsToCache(txtInst[f], tFontsUpdateCacheList);		
+	loadedTypekitCount++;		
+	if(loadedTypekitCount == totalTypekitCount) {		
+		lib.updateListCache(tFontsUpdateCacheList);		
+	}		
+};
+// symbols:
+(lib.Анимация18 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Слой 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,1,1).p("AlHAAQAAAkgaAZQAAAAgBABQgYAYgkAAQgjAAgZgYQgBgBAAAAQgZgZAAgkQAAgiAZgaQAZgZAkAAQAkAAAZAZQAaAaAAAigAH1AAQAAAkgaAZQAAAAAAABQgZAYgjAAQgkAAgZgYQgBgBAAAAQgZgZAAgkQAAgiAZgaQAZgZAlAAQAjAAAZAZQAaAaAAAig");
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-51.1,-9.6,102.3,19.3);
+(lib.Анимация17 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Слой 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,1,1).p("AlHAAQAAAkgaAZQAAAAgBABQgYAYgkAAQgjAAgZgYQgBgBAAAAQgZgZAAgkQAAgiAZgaQAZgZAkAAQAkAAAZAZQAaAaAAAigAH1AAQAAAkgaAZQAAAAAAABQgZAYgjAAQgkAAgZgYQgBgBAAAAQgZgZAAgkQAAgiAZgaQAZgZAlAAQAjAAAZAZQAaAaAAAig");
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-51.1,-9.6,102.3,19.3);
+(lib.Анимация16 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Слой 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,1,1).p("AH1AAQAAAkgZAZQgBAAAAABQgZAYgjAAQgkAAgZgYQAAgBgBAAQgZgZAAgkQAAgiAZgaQAagZAkAAQAkAAAZAZQAZAaAAAigAlHAAQAAAkgaAZQAAAAgBABQgYAYgkAAQgjAAgZgYQgBgBAAAAQgZgZAAgkQAAgiAZgaQAZgZAkAAQAkAAAZAZQAaAaAAAig");
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-51.1,-9.6,102.3,19.3);
+(lib.Анимация1 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Слой 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(2,1,1).p("An/BmQgpAmACAyQgXAFgLgdQgKgaAHgdQAeiaB8hcQB9hdB5ACQB5ABBcAWQBdAVBABFQBABFBFAHQBGAHA4AJQA5AIAdARQAdASAZAtQAXAtgkBdQgmAAgMACQgBghgOglQgOglgrgSQgrgTgjAMQgkAMgWAUQgWATgMAeQgNAdgKARQgKAQgeAGQgTADgkAAQjmgDh0gDQhJAAgVgXQgdgggagjQgagkgUgOQgVgNgSABQgCAAgBABQgwgFgnAlg");
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-60.1,-23.7,120.3,47.6);
+// stage content:
+(lib.Эстакада = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// колеса
+	this.instance = new lib.Анимация16("synched",0);
+	this.instance.parent = this;
+	this.instance.setTransform(-4.1,384.6);
+	this.instance_1 = new lib.Анимация17("synched",0);
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(65.7,384.6);
+	this.instance_1._off = true;
+	this.instance_2 = new lib.Анимация18("synched",0);
+	this.instance_2.parent = this;
+	this.instance_2.setTransform(65.7,384.6);
+	this.instance_2._off = true;
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({_off:true,x:65.7},26).wait(256));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).to({_off:false},26).to({_off:true},12).wait(244));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(26).to({_off:false},12).to({x:157.4},19).to({rotation:-30.2,x:248.3,y:360},23).wait(18).to({startPosition:0},0).to({regY:0.1,rotation:-26.7,x:289,y:337},21).to({regY:0.3,rotation:-0.3,x:375.8,y:319.6},23).to({rotation:-0.3,x:451.4},18).to({regX:0.1,rotation:30.6,x:522.5,y:338.8},24).to({regX:0.2,rotation:35.1,x:554.1,y:356.3},15).to({regX:0.3,rotation:5.1,x:620.8,y:383.3},16).to({regX:0.2,regY:0.4,rotation:0.3,x:687.9,y:386.2},20).to({rotation:0.3},16).to({x:868.6,y:387.5},30).wait(1));
+	// машина
+	this.instance_3 = new lib.Анимация1("synched",0);
+	this.instance_3.parent = this;
+	this.instance_3.setTransform(-2.2,364.6);
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).to({x:67.6},26).to({startPosition:0},12).to({x:159.3},19).to({rotation:-30.2,x:239.9,y:341.7},23).to({startPosition:0},18).to({rotation:-26.7,x:281.7,y:318.2},21).to({regX:0.1,regY:0.2,rotation:-0.3,x:377.7,y:299.5},23).to({rotation:-0.3,x:453.2},18).to({regX:0.2,regY:0.3,rotation:30.6,x:534.3,y:322.6},24).to({regX:0.3,regY:0.4,rotation:35.1,x:567.1,y:341.3},15).to({regY:0.5,rotation:5.1,x:624.5,y:363.8},16).to({rotation:0.3,x:690,y:366.4},20).to({rotation:0.3},16).to({x:870.7,y:367.7},30).wait(1));
+	// Слой 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#FF0000").s().p("Egv5AFJIg8AAQgJAAgFgGIgCgCQgEgFAAgHQAAgHAEgFIACgCQAFgGAJAAIA8AAQAIAAAGAGIAEAGQACADAAAFQAAAFgCAEIgEAFQgGAGgIAAIAAAAgEAwRAFJQgIAAgGgGQgGgGAAgIQAAgIAGgGQAGgGAIAAIAmAAQAIAAAGAGQAFAGAAAIQAAAIgFAGQgGAGgIAAgA1VkCQgIgCgEgHQgEgHACgIQACgHAFgFIACgBIA0geQAHgEAIACQAIACAEAHQAFAHgCAIQgCAIgIAEIgzAfIgDABQgEACgEAAIgFgBg");
+	this.shape.setTransform(441.9,365);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#000000").s().p("EA+OAFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAFAGQAGAGAAAJQAAAIgGAGQgFAFgJAAIAAAAgEA8WAFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAFAGQAGAGAAAJQAAAIgGAGQgFAFgJAAIAAAAgEA6eAFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAGAGQAFAGAAAJQAAAIgFAGQgGAFgJAAIAAAAgEA4mAFmIg7AAQAIAAAGgFQAFgGAAgIQAAgJgFgGQgGgFgIAAIA7AAQAJgBAFAGQAGAGAAAJQAAAIgGAGQgFAFgJAAIAAAAgEA2kAFhQgGgGAAgIQAAgJAGgGQAGgGAIABIATAAQgIAAgGAFQgGAGAAAJQAAAIAGAGQAGAFAIAAIgTAAIAAAAQgIAAgGgFgEA12AFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAGAGQAFAGAAAJQAAAIgFAGQgGAFgJAAIAAAAgEAz+AFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAGAGQAFAGAAAJQAAAIgFAGQgGAFgJAAIAAAAgEAyGAFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAFAGQAGAGAAAJQAAAIgGAGQgFAFgJAAIAAAAgEAwOAFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAGAGQAFAGAAAJQAAAIgFAGQgGAFgJAAIAAAAgEAuWAFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAGAGQAFAGAAAJQAAAIgFAGQgGAFgJAAIAAAAgEAseAFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAFAGQAGAGAAAJQAAAIgGAGQgFAFgJAAIAAAAgEAqmAFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAGAGQAFAGAAAJQAAAIgFAGQgGAFgJAAIAAAAgEAouAFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAGAGQAFAGAAAJQAAAIgFAGQgGAFgJAAIAAAAgEAm2AFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAFAGQAGAGAAAJQAAAIgGAGQgFAFgJAAIAAAAgEAk+AFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAGAGQAFAGAAAJQAAAIgFAGQgGAFgJAAIAAAAgEAjGAFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAGAGQAFAGAAAJQAAAIgFAGQgGAFgJAAIAAAAgEAhOAFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAFAGQAGAGAAAJQAAAIgGAGQgFAFgJAAIAAAAgAfWFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAGAGQAFAGAAAJQAAAIgFAGQgGAFgJAAIAAAAgA+NFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAFAGQAGAGAAAJQAAAIgGAGQgFAFgJAAIAAAAgEggFAFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAGAGQAFAGAAAJQAAAIgFAGQgGAFgJAAIAAAAgEgh9AFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAFAGQAGAGAAAJQAAAIgGAGQgFAFgJAAIAAAAgEgj1AFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAFAGQAGAGAAAJQAAAIgGAGQgFAFgJAAIAAAAgEgltAFmIg8AAQgIABgGgGQgGgGAAgIQAAgJAGgGQAGgGAIABIA8AAQAJgBAGAGQAFAGAAAJQAAAIgFAGQgGAFgJAAIAAAAgEgnlAFmIg8AAQgIABgGgGIgEgGQACgEAAgEQAAgFgCgEIAEgGQAGgGAIABIA8AAQAJgBAFAGQAGAGAAAJQAAAIgGAGQgFAFgJAAIAAAAgEgqhAFmIg8AAQgJABgFgGQgGgGAAgIQAAgJAGgGQAFgGAJABIA8AAQAIgBAGAGIACACQgEAGAAAHQAAAGAEAGIgCACQgGAFgIAAIAAAAgEgsZAFmIg8AAQgJABgGgGQgFgGAAgIQAAgJAFgGQAGgGAJABIA8AAQAIgBAGAGQAGAGAAAJQAAAIgGAGQgGAFgIAAIAAAAgEguRAFmIg8AAQgJABgFgGQgGgGAAgIQAAgJAGgGQAFgGAJABIA8AAQAIgBAGAGQAGAGAAAJQAAAIgGAGQgGAFgIAAIAAAAgEgwJAFmIg8AAQgJABgFgGQgGgGAAgIQAAgJAGgGQAFgGAJABIA8AAQAIgBAGAGQAGAGAAAJQAAAIgGAGQgGAFgIAAIAAAAgEgyBAFmIg8AAQgJABgGgGQgFgGAAgIQAAgJAFgGQAGgGAJABIA8AAQAIgBAGAGQAGAGAAAJQAAAIgGAGQgGAFgIAAIAAAAgEgz5AFmIg8AAQgJABgFgGQgGgGAAgIQAAgJAGgGQAFgGAJABIA8AAQAIgBAGAGQAGAGAAAJQAAAIgGAGQgGAFgIAAIAAAAgEg1xAFmIg8AAQgJABgFgGQgGgGAAgIQAAgJAGgGQAFgGAJABIA8AAQAIgBAGAGQAGAGAAAJQAAAIgGAGQgGAFgIAAIAAAAgEg3pAFmIg8AAQgJABgGgGQgFgGAAgIQAAgJAFgGQAGgGAJABIA8AAQAIgBAGAGQAGAGAAAJQAAAIgGAGQgGAFgIAAIAAAAgEg5hAFmIg8AAQgJABgFgGQgGgGAAgIQAAgJAGgGQAFgGAJABIA8AAQAIgBAGAGQAGAGAAAJQAAAIgGAGQgGAFgIAAIAAAAgEg7ZAFmIg8AAQgJABgFgGQgGgGAAgIQAAgJAGgGQAFgGAJABIA8AAQAIgBAGAGQAGAGAAAJQAAAIgGAGQgGAFgIAAIAAAAgEg9RAFmIg8AAQgJABgGgGQgFgGAAgIQAAgJAFgGQAGgGAJABIA8AAQAIgBAGAGQAGAGAAAJQAAAIgGAGQgGAFgIAAIAAAAgAdgFJIgxgjQgHgFgBgIQgCgIAFgHQAFgHAIgBQAIgCAHAFIAxAjQAHAFABAIQABAIgFAHQgEAHgIABIgEABQgGAAgFgEgA9eFIQgIgCgEgHQgEgHACgIQACgIAHgEIA0geQAIgEAIACQAHACAFAHQAEAHgDAIQgCAIgHAEIg0AeQgFADgFAAIgFgBgA72EMQgIgCgEgHQgEgHACgIQACgIAHgEIA0geQAIgEAHACQAIACAEAHQAFAHgCAIQgDAIgHAE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GQAGgGAHAAIA8AAQAIAAAGAGQAGAGAAAJQAAAIgGAGQgGAGgIAAIAAAAgAg2k9Ig8AAQgJAAgFgGQgGgGAAgIQAAgJAGgGQAFgGAJAAIA8AAQAIAAAGAGQAGAGAAAJQAAAIgGAGQgGAGgIAAIAAAAgAiuk9Ig8AAQgJAAgFgGQgGgGAAgIQAAgJAGgGQAFgGAJAAIA8AAQAIAAAGAGQAGAGAAAJQAAAIgGAGQgGAGgIAAIAAAAgAkmk9Ig8AAQgJAAgGgGQgFgGAAgIQAAgJAFgGQAGgGAJAAIA8AAQAIAAAGAGQAGAGAAAJQAAAIgGAGQgGAGgIAAIAAAAgAmek9Ig8AAQgJAAgFgGQgGgGAAgIQAAgJAGgGQAFgGAJAAIA8AAQAIAAAGAGQAGAGAAAJQAAAIgGAGQgGAGgIAAIAAAAgAoWk9Ig8AAQgJAAgFgGQgGgGAAgIQAAgJAGgGQAFgGAJAAIA8AAQAIAAAGAGQAGAGAAAJQAAAIgGAGQgGAGgIAAIAAAAgAqOk9Ig8AAQgJAAgGgGQgFgGAAgIQAAgJAFgGQAGgGAJAAIA8AAQAIAAAGAGQAGAGAAAJQAAAIgGAGQgGAGgIAAIAAAAg");
+	this.shape_1.setTransform(398.3,362.1);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_1},{t:this.shape}]}).to({state:[{t:this.shape_1},{t:this.shape}]},199).to({state:[{t:this.shape_1},{t:this.shape}]},16).to({state:[{t:this.shape_1},{t:this.shape}]},66).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(337.6,626.2,861,71.8);
+})(lib = lib||{}, images = images||{}, createjs = createjs||{}, ss = ss||{});
+var lib, images, createjs, ss;
+</script>
+<script>
+var canvas, stage, exportRoot;
+function init() {
+	canvas = document.getElementById("canvas");
+	handleComplete();
+}
+function handleComplete() {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	exportRoot = new lib.Эстакада();
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);	
+	//Registers the "tick" event listener.
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);	    
+	//Code to support hidpi screens and responsive scaling.
+	(function(isResp, respDim, isScale, scaleType) {		
+		var lastW, lastH, lastS=1;		
+		window.addEventListener('resize', resizeCanvas);		
+		resizeCanvas();		
+		function resizeCanvas() {			
+			var w = lib.properties.width, h = lib.properties.height;			
+			var iw = window.innerWidth, ih=window.innerHeight;			
+			var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
+			if(isResp) {                
+				if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+					sRatio = lastS;                
+				}				
+				else if(!isScale) {					
+					if(iw<w || ih<h)						
+						sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==1) {					
+					sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==2) {					
+					sRatio = Math.max(xRatio, yRatio);				
+				}			
+			}			
+			canvas.width = w*pRatio*sRatio;			
+			canvas.height = h*pRatio*sRatio;
+			canvas.style.width = w*sRatio+'px';			
+			canvas.style.height = h*sRatio+'px';
+			stage.scaleX = pRatio*sRatio;			
+			stage.scaleY = pRatio*sRatio;			
+			lastW = iw; lastH = ih; lastS = sRatio;		
+		}
+	})(true,'width',true,1);	
+}
+</script>
+<!-- write your code here -->
+</head>
+<body onload="init();" style="margin:0px;">
+ <h3 align="center" >Эстакада</h3>
+	<canvas id="canvas" width="800" height="600" style="display: block; background-color:rgba(255, 255, 255, 1.00)"></canvas>
+</body>
+</html>

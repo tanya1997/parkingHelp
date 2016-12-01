@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="none">
+
+        <item
+
+            android:id="@+id/parking_city_item"
+            android:icon="@drawable/ic_directions_car_black_24dp"
+            android:checkable="false"
+            android:checked="false"
+            android:title="Парковка в городе"
+            />
+        <item
+
+            android:checkable="false"
+            android:checked="false"
+            android:id="@+id/parking_autodrome_item"
+            android:icon="@drawable/ic_directions_car_black_24dp"
+            android:title="Автодром" />
+        <item
+
+            android:checkable="false"
+            android:checked="false"
+            android:id="@+id/parking_regulations_item"
+            android:icon="@drawable/ic_school_black_24dp"
+            android:title="Правила парковки (ПДД)" />
+        <item
+
+            android:checkable="false"
+            android:checked="false"
+            android:id="@+id/feedback_item"
+            android:icon="@drawable/ic_mail_black_24dp"
+            android:title="Обратная связь" />
+    </group>
+</menu>

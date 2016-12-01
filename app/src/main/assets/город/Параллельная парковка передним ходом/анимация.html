@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<!--
+	NOTES:
+	1. All tokens are represented by '$' sign in the template.
+	2. You can write your code only wherever mentioned.
+	3. All occurrences of existing tokens will be replaced by their appropriate values.
+	4. Blank lines will be removed automatically.
+	5. Remove unnecessary comments before creating your template.
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+<title>Параллельная парковка передним ходом</title>
+<!-- write your code here -->
+<script src="../../createjs-2015.11.26.min.js"></script>
+<script>
+(function (lib, img, cjs, ss) {
+var p; // shortcut to reference prototypes
+lib.webFontTxtInst = {}; 
+var loadedTypekitCount = 0;
+var loadedGoogleCount = 0;
+var gFontsUpdateCacheList = [];
+var tFontsUpdateCacheList = [];
+// library properties:
+lib.properties = {
+	width: 800,
+	height: 600,
+	fps: 24,
+	color: "#FFFFFF",
+	opacity: 1.00,
+	webfonts: {},
+	manifest: []
+};
+lib.ssMetadata = [];
+lib.updateListCache = function (cacheList) {		
+	for(var i = 0; i < cacheList.length; i++) {		
+		if(cacheList[i].cacheCanvas)		
+			cacheList[i].updateCache();		
+	}		
+};		
+lib.addElementsToCache = function (textInst, cacheList) {		
+	var cur = textInst;		
+	while(cur != exportRoot) {		
+		if(cacheList.indexOf(cur) != -1)		
+			break;		
+		cur = cur.parent;		
+	}		
+	if(cur != exportRoot) {	//we have found an element in the list		
+		var cur2 = textInst;		
+		var index = cacheList.indexOf(cur);		
+		while(cur2 != cur) { //insert all it's children just before it		
+			cacheList.splice(index, 0, cur2);		
+			cur2 = cur2.parent;		
+			index++;		
+		}		
+	}		
+	else {	//append element and it's parents in the array		
+		cur = textInst;		
+		while(cur != exportRoot) {		
+			cacheList.push(cur);		
+			cur = cur.parent;		
+		}		
+	}		
+};		
+lib.gfontAvailable = function(family, totalGoogleCount) {		
+	lib.properties.webfonts[family] = true;		
+	var txtInst = lib.webFontTxtInst && lib.webFontTxtInst[family] || [];		
+	for(var f = 0; f < txtInst.length; ++f)		
+		lib.addElementsToCache(txtInst[f], gFontsUpdateCacheList);		
+	loadedGoogleCount++;		
+	if(loadedGoogleCount == totalGoogleCount) {		
+		lib.updateListCache(gFontsUpdateCacheList);		
+	}		
+};		
+lib.tfontAvailable = function(family, totalTypekitCount) {		
+	lib.properties.webfonts[family] = true;		
+	var txtInst = lib.webFontTxtInst && lib.webFontTxtInst[family] || [];		
+	for(var f = 0; f < txtInst.length; ++f)		
+		lib.addElementsToCache(txtInst[f], tFontsUpdateCacheList);		
+	loadedTypekitCount++;		
+	if(loadedTypekitCount == totalTypekitCount) {		
+		lib.updateListCache(tFontsUpdateCacheList);		
+	}		
+};
+// symbols:
+(lib.Символ1 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Слой 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(3,2,2).p("AhsgoIDZAAQASAAAMAMQAMAMAAAQQAAARgMAMQgMAMgSAAIjZAAQgSAAgMgMQgMgMAAgRQAAgQAMgMQAMgMASAAg");
+	this.shape.setTransform(15.2,4.2);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-1.5,-1.5,33.3,11.4);
+(lib.Анимация10 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Слой 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(3,1,1).rr(-100,-50,200,100,40);
+	this.shape.setTransform(0,0.2);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f("#000000").s().p("ABFg7YAAAAACgBACgBYABAAACAAACAAIAAAAIAAAAYABAAgBAAAAAAIAAAAIAAAAIABAAYABAAgBABAAAAYgBgBABABAAAAYAAAAAAABAAAAYAAAFgBAGgCAHYAAABAAADgBABYAAABgBACgBACYgBADgBADgCADYgEAGgGAGgHAFYgDACgEADgEAAYgFACgFADgEADYgFACgEACgFACYgFACgFACgDABIgHADIgCAAIgBAAYAAABACgBgBAAIAAAAIAAAAIgCABIgEABIgJACIgHABYgEABgGgBgFABIgHAAIgCAAIgBAAIAAAAIAAAAYABAAgBAAAAAAIAAAAIgDgBYAAAAAAAAAAAAYABABABAAABACYABACABACAAACYAAAAAAABAAAAYAAABAAAAAAAAYgBAAADgFACgDYAEgGACgEADgEYADgFADgGADgFYABgBABgCABgDYABgDABgCABgEIABgEIAAgCIAAgBIABgCIAAAAIAAAAIAAgBIAAgDYAAgCgBgCAAgCYgBgHgEgFgDgEYgEgEgFgDgDgCIgCgBIgCAAIgCgBYgCAAgCgBgCAAYgCgBgCAAgCAAYgCABgBAAgCAAYgGACgDAEgCACYgCACgBABAAAAIAAAAYAAAAACAAACgCYADAAAEgCAEABYABAAABABABAAYABABABAAABABYABAAABABACABIACACIABAAYgBAAABABAAAAYAFAEACAGgBAEYAAABAAAAAAAAIgBAEIAAAAIAAABIAAAAYAAAAAAgDAAABIAAABIgBABIgBACYgCAEgDADgCAEYgDADgDAEgDAEYgEACgEAFgDADYgEAFgFAFgDALYgBACAAABAAACYgBACAAACABACYAAAFACAFADAEYADAEAEACADACYADABACABADABYAEABAAAAACAAIABAAIABAAIABABIADAAIAKABYAHgBAHAAAHgBIALgCYADAAADgBADgBIAEgBIABAAIAAgBIAAAAIACgBIAKgDYAMgFALgGAKgHYAFgEAFgDAEgDIAEgDIADgDYACgCADgDACgCYAIgJAGgIADgLYABgFABgFABgFYgBgDAAgCAAgCYAAgDAAgBAAgCYgCgIgBgGgDgGYAAgBgBgBAAAAYgBgBAAgBgCgBYgBAAgCgBAAABYgBAAgBAAAAAAYgCABgCABgBABYgCACgBACAAAAIAAAA");
+	this.shape_1.setTransform(55.3,55.8);
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f("#000000").s().p("AhRhpYAOAEAPACAOACYAPABAPACAMABIADAAYABAAABgBABAAYABAAABABABAAYAAAAAAAAAAAAYABAAAAAAAAAAYAAAAAAABAAAAYAAAAABAAAAAAIAAAAIADACYACABACACACADIABADIABABYgBgBABABAAAAIABACIADAHYADAFACAFACAFYACAEABAFACAFYACAEABAFACAFIACAHIABAIIACAHIABAGIABAHIAAAIYABAFAAAFAAAFIAAAIIAAAAIAAAAIAAAAYAAAAAAABAAgBIAAAAIAAABIAAACIAAAEYgBADAAACAAADYgBACAAADAAACYgBAFgBAFgBAFIgDAGIgDAHIgEAGYgBACgCACgBACIgGAFIgGAFIgGAFYgDABgCABgDABIAAAAYADAAADAAADAAYACgBADAAADgBIAIgDYADgCACgBACgBYADgCACgCADgCYACgCADgCACgCYACgCACgDABgCIAFgIIAEgIYABgDABgDABgCYACgGACgGABgGIABgEIAAgCIAAgBIAAAAIAAgBIAAAAIABgJIABgIIAAgJYAAgGAAgGAAgEIgBgIIgCgJIgBgIIgDgJYgBgGgCgFgCgGYgCgFgCgFgDgGYgCgFgDgGgCgEIgFgHIgBgCIAAgBIgBgBIgDgEYgEgGgGgGgIgDIADACYgCgBgBgBgBAAYgBgBgCgBgBAAIgEgBYgBAAgCgBgBABYgCAAgDgBgCABIgHABIADAAYgMABgPACgPABYgOACgPACgOADIAAAA");
+	this.shape_2.setTransform(-91.7,21.9);
+	this.shape_3 = new cjs.Shape();
+	this.shape_3.graphics.f("#000000").s().p("AhRBqYAOADAPACAOACYAPABAPACAMABIgDAAIAHABYACABADgBACAAYABABACgBABAAIAEgBYABAAACgBABgBYABAAABgBACgBIgDACYAIgDAGgGAEgGIADgEIABgBIAAgBIABgCIAFgHYACgEADgGACgFYADgGACgFACgFYACgGACgFABgGIADgJIABgIIACgJIABgIYAAgEAAgGAAgGIAAgJIgBgIIgBgJIAAAAIAAgBIAAAAIAAgBIAAgCIgBgEYgBgGgCgGgCgGYgBgCgBgDgBgDIgEgIIgFgIYgBgCgCgDgCgCYgCgCgDgCgCgCYgDgCgCgCgDgCYgCgBgCgBgDgCIgIgDYgDgBgDAAgCgBYgDAAgDAAgDAAIAAAAYADABACABADABIAGAFIAGAFIAGAFYABACACACABACIAEAGIADAHIADAGYABAFABAFABAFYAAACAAADABACYAAADAAACABADIAAAEIAAACIAAABIAAAAYAAgBAAABAAAAIAAAAIAAAAIAAAAIAAAIYAAAFAAAFgBAFIAAAIIgBAGIgBAHIgCAHIgBAIIgCAHYgCAFgBAFgCAEYgCAFgBAFgCAEYgCAFgCAFgDAFIgDAHIgBACYAAAAgBABABgBIgBABIgBADYgCADgCACgCABIgDACIAAAAYAAAAgBAAAAAAYAAAAAAABAAAAYAAAAAAAAgBAAYAAAAAAAAAAAAYgBAAgBABgBAAYgBAAgBgBgBAAIgDAAYgMABgPACgPABYgOACgPACgOAEIAAAA");
+	this.shape_3.setTransform(-91.7,-21.9);
+	this.shape_4 = new cjs.Shape();
+	this.shape_4.graphics.f().s("#000000").ss(2,2,2).p("AAAieQAQAGARgEQAUgDAKgNQAKgNACgOQAKgugXgjQgLgTgUgKQgTgKgTACQghAEgYAjQgMATgDAVQgEAXAJATQAOAjAoARQAQAGAUAFQAEABAiAGAACCfQARgGARAEQAUADAKANQAKANACAOQAKAugXAjQgLATgUAKQgTAKgTgCQghgEgYgjQgMgTgDgVQgEgXAJgTQAOgjAogRQAQgGAUgFQAEgBAigG");
+	this.shape_4.setTransform(84.5,1.1);
+	this.shape_5 = new cjs.Shape();
+	this.shape_5.graphics.f("#000000").s().p("ABFA8YAAAAABACACACYABABACABACABYAAAAABAAABAAYAAABACgBABAAYACgBAAgBABgBYAAAAABgBAAgBYADgGABgGACgIYAAgCAAgBAAgDYAAgCAAgCABgDYgBgFgBgFgBgFYgDgLgGgIgIgJYgCgCgDgDgCgCIgDgDIgEgDYgEgDgFgDgFgEYgKgHgLgGgMgFIgKgDIgCgBIAAAAIAAgBIgBAAIgEgBYgDgBgDgBgDAAIgLgCYgHgBgHAAgHgBIgKABIgDAAIgBABIgBAAIgBAAYgCAAAAAAgEABYgDABgCABgDABYgDACgEACgDAEYgDAEgCAFAAAFYgBACAAACABACYAAACAAABABACYADALAFAFAEAFYADADAEAEAEADYADAEADAEADADYACAEADADACAEIABACIABABIAAABYAAABAAgDAAAAIAAAAIAAABIAAAAIABAEYAAAAAAAAAAABYABAEgCAGgFAEYAAAAgBABABAAIgBAAIgCACYgCABgBABgBAAYgBABgBAAgBABYgBAAgBABgBAAYgEABgEgCgDAAYgCgCgCAAAAAAIAAAAYAAAAABABACACYACACADAEAGACYACAAABAAACABYACAAACAAACgBYACAAACgBACAAIACgBIACAAIACgBYADgCAFgDAEgEYADgEAEgFABgHYAAgCABgCAAgCIAAgDIAAgBIAAAAIAAAAIgBgCIAAgBIAAgCIgBgEYgBgEgBgCgBgDYgBgDgBgCgBgCYgDgEgDgGgDgFYgDgEgCgEgEgGYgCgDgDgFABAAYAAAAAAAAAAABYAAAAAAABAAAAYAAACgBACgBACYgBACgBAAgBABYAAAAAAAAAAAAIADgBIAAAAYAAAAABAAgBAAIAAAAIAAAAIABAAIACAAIAHAAYAFABAGgBAEABIAHABIAJACIAEABIACABIAAAAIAAAAYABAAgCgBAAABIABAAIACAAIAHADYADABAFACAFACYAFACAEACAFACYAEADAFADAFABYAEABAEADADACYAHAFAGAGAEAGYACADABADABADYABACABACAAABYABABAAADAAABYACAHABAGAAAFYAAAAAAABAAAAYAAAAgBABABgBYAAAAABABgBAAIgBAAIAAAAIAAAAYAAAAABAAgBAAIAAAAIAAAAYgCAAgCAAgBAAYgCgBgCgBAAAAIAAAA");
+	this.shape_5.setTransform(55.3,-55.8);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_5},{t:this.shape_4},{t:this.shape_3},{t:this.shape_2},{t:this.shape_1},{t:this.shape}]}).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-101.5,-62.6,203,125.2);
+(lib.Анимация8 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Слой 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(5,2,2).p("AAAj/IAAH/");
+	this.shape.setTransform(60.2,3.2);
+	this.shape_1 = new cjs.Shape();
+	this.shape_1.graphics.f().s("#000000").ss(5,2,2).p("AAAAgIAAg/");
+	this.shape_1.setTransform(60.2,-25.6);
+	this.shape_2 = new cjs.Shape();
+	this.shape_2.graphics.f().s("#000000").ss(3,2,2).rr(-19.1,-5.25,38.2,10.5,5.25);
+	this.shape_2.setTransform(-45,-36.9,0.794,0.794,0,180,0);
+	this.shape_3 = new cjs.Shape();
+	this.shape_3.graphics.f().s("#000000").ss(3,2,2).rr(-19.1,-5.25,38.2,10.5,5.25);
+	this.shape_3.setTransform(-45,36.9,0.794,0.794);
+	this.shape_4 = new cjs.Shape();
+	this.shape_4.graphics.f().s("#000000").ss(5,2,2).p("AAAkfIAAI/");
+	this.shape_4.setTransform(-44,0);
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[{t:this.shape_4},{t:this.shape_3},{t:this.shape_2},{t:this.shape_1},{t:this.shape}]}).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-61.6,-42.5,124.4,85.1);
+(lib.Анимация6 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// Слой 1
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f().s("#000000").ss(3,2,2).rr(-19.1,-5.25,38.2,10.5,5.25);
+	this.shape.setTransform(0,0,0.794,0.794,0,180,0);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(1));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-16.6,-5.6,33.3,11.4);
+// stage content:
+(lib.Параллельнаяпарковкапереднимходом = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+	// левое колесо
+	this.instance = new lib.Символ1();
+	this.instance.parent = this;
+	this.instance.setTransform(600.4,344.7,1,1,0,0,180,15.2,4.2);
+	this.timeline.addTween(cjs.Tween.get(this.instance).to({x:509.2},32).to({regY:4.3,skewX:30,skewY:210,y:344.6},12).to({regX:15.1,skewX:75,skewY:255,x:374.3,y:200.5},57).to({skewX:25,skewY:205,x:373.3},13).to({regY:4.4,skewX:-20,skewY:160,x:153.8,y:211.6},50).to({regX:15.2,skewX:0,skewY:180,x:154.7},13).to({x:370.1},29).wait(10));
+	// правое колесо
+	this.instance_1 = new lib.Анимация6("synched",0);
+	this.instance_1.parent = this;
+	this.instance_1.setTransform(600.4,270.9,1,1,0,0,180);
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).to({x:509.3},32).to({skewX:30,skewY:210,y:270.8},12).to({regX:-0.1,regY:0.1,skewX:75,skewY:255,x:426.5,y:148.4},57).to({skewX:25,skewY:205,x:425.5},13).to({regY:0.3,skewX:-20,skewY:160,x:153.9,y:137.9},50).to({regX:0,regY:0.1,skewX:0,skewY:180,x:154.8,y:137.8},13).to({x:370.2},29).wait(9).to({startPosition:0},0).wait(1));
+	// Задняя ось
+	this.instance_2 = new lib.Анимация8("synched",0);
+	this.instance_2.parent = this;
+	this.instance_2.setTransform(660.4,307.8,1,1,0,0,180);
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).to({x:569.2},32).wait(12).to({startPosition:0},0).to({regY:0.2,skewX:45,skewY:225,x:442.7,y:216.9},57).wait(13).to({x:441.7},0).to({regX:0.1,regY:0.3,skewX:0,skewY:180,x:213.7,y:174.8},50).wait(13).to({x:214.6},0).to({x:430},29).wait(9).to({startPosition:0},0).wait(1));
+	// машина - копия
+	this.instance_3 = new lib.Анимация10("synched",0);
+	this.instance_3.parent = this;
+	this.instance_3.setTransform(656.9,306.7,1,1,0,0,180);
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).to({x:565.7},32).wait(12).to({startPosition:0},0).to({regX:-0.1,regY:0.1,skewX:45,skewY:225,x:441.1,y:213.7},57).wait(13).to({x:440.1},0).to({regX:0,regY:0.2,skewX:0,skewY:180,x:210.2,y:173.7},50).wait(13).to({x:211.2},0).to({x:426.6},29).wait(9).to({startPosition:0},0).wait(1));
+	// машина
+	this.shape = new cjs.Shape();
+	this.shape.graphics.f("#003366").s().p("ApXHzQilAAh1h1Qh2h1ABilIAAjGQgBimB2h2QB1h1ClAAISvAAQClAAB1B1QB1B2AACmIAADGQAAClh1B1Qh1B1ilAAg");
+	this.shape.setTransform(656.9,171.7,1,1,0,0,180);
+	this.timeline.addTween(cjs.Tween.get(this.shape).wait(216));
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(955.4,421.7,203,247.6);
+})(lib = lib||{}, images = images||{}, createjs = createjs||{}, ss = ss||{});
+var lib, images, createjs, ss;
+</script>
+<script>
+var canvas, stage, exportRoot;
+function init() {
+	canvas = document.getElementById("canvas");
+	handleComplete();
+}
+function handleComplete() {
+	//This function is always called, irrespective of the content. You can use the variable "stage" after it is created in token create_stage.
+	exportRoot = new lib.Параллельнаяпарковкапереднимходом();
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);	
+	//Registers the "tick" event listener.
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);	    
+	//Code to support hidpi screens and responsive scaling.
+	(function(isResp, respDim, isScale, scaleType) {		
+		var lastW, lastH, lastS=1;		
+		window.addEventListener('resize', resizeCanvas);		
+		resizeCanvas();		
+		function resizeCanvas() {			
+			var w = lib.properties.width, h = lib.properties.height;			
+			var iw = window.innerWidth, ih=window.innerHeight;			
+			var pRatio = window.devicePixelRatio || 1, xRatio=iw/w, yRatio=ih/h, sRatio=1;			
+			if(isResp) {                
+				if((respDim=='width'&&lastW==iw) || (respDim=='height'&&lastH==ih)) {                    
+					sRatio = lastS;                
+				}				
+				else if(!isScale) {					
+					if(iw<w || ih<h)						
+						sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==1) {					
+					sRatio = Math.min(xRatio, yRatio);				
+				}				
+				else if(scaleType==2) {					
+					sRatio = Math.max(xRatio, yRatio);				
+				}			
+			}			
+			canvas.width = w*pRatio*sRatio;			
+			canvas.height = h*pRatio*sRatio;
+			canvas.style.width = w*sRatio+'px';			
+			canvas.style.height = h*sRatio+'px';
+			stage.scaleX = pRatio*sRatio;			
+			stage.scaleY = pRatio*sRatio;			
+			lastW = iw; lastH = ih; lastS = sRatio;		
+		}
+	})(true,'width',true,1);	
+}
+</script>
+<!-- write your code here -->
+</head>
+<body onload="init();" style="margin:0px;">
+<h3 align="center">Параллельная парковка передним ходом</h3>
+	<canvas id="canvas" width="800" height="600" style="display: block; background-color:rgba(255, 255, 255, 1.00)"></canvas>
+</body>
+</html>

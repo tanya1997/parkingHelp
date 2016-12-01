@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "696461354376",
+    "firebase_url": "https://parkinghelp-3c927.firebaseio.com",
+    "project_id": "parkinghelp-3c927",
+    "storage_bucket": "parkinghelp-3c927.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:696461354376:android:4dbca760f29d2d52",
+        "android_client_info": {
+          "package_name": "com.project.empyrean.parkinghelp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "696461354376-vplq7h9i02rqq9j7593dcdq27acm7kgf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.project.empyrean.parkinghelp",
+            "certificate_hash": "0B4669F158D499932D024BA3D48283C771C8E0FF"
+          }
+        },
+        {
+          "client_id": "696461354376-2h5radmuq3s4armav9es2gh4idlolnj0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC9mDGMm0pYaCFBTH-EUCZGg72cIGcyTdc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "696461354376-2h5radmuq3s4armav9es2gh4idlolnj0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

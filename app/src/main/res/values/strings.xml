@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Parking Help</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="banner_ad_unit_id">ca-app-pub-8827941371859665/2666170035</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+</resources>
